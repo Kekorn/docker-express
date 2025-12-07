@@ -26,8 +26,17 @@ RUN chmod 755 /app
 # váltás az új felhasználóra
 USER appuser
 
+
+# App port
+ENV PORT=8080
+
+
+# Render elvárja, hogy az app induljon és figyeljen a PORT-on
+EXPOSE 8080
+
+
 # alkalmazás portjának megnyitása a konténerben
-EXPOSE 3000
+# EXPOSE 3000
 
 # a konténer indítási parancsa - futtassa a fő fájlt közvetlenül vagy az npm start parancsot
 # A legtisztább megoldás: node app.js
