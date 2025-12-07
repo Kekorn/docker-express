@@ -1,0 +1,17 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;    
+}
+
+body {
+    background-color: #2A7B9B;
+    background-image: linear-gradient(to bottom right, #2A7B9B, green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: whitesmoke;
+    font-size: 2em;
+    margin: auto;
+}
