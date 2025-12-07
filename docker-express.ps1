@@ -30,3 +30,14 @@ docker build . -t m9g4gj/express-app
 # Konténer futtatása:
 # docker run -p 16111:3000 m9g4gj/express-app
 docker run -d -p 16111:3000 m9g4gj/express-app
+
+# A böngésző megnyitása a futó alkalmazással
+# Start-Process "http://localhost:16111"
+
+# Konténer leállítása (a konténer azonosítójának lekérése és leállítása)
+# $containerId = docker ps -q --filter "ancestor=m9g4gj/express-app"
+# docker stop $containerId
+# docker rm $containerId
+# docker ps -a
+
+# A webapp publikus elérhetősége: https://express-docker-app.onrender.com/
