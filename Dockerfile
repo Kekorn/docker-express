@@ -3,8 +3,9 @@ FROM node:25.2.1-alpine3.23
 
 # új felhasználó létrehozása a konténerben, hogy ne root-ként 
 # fusson az alkalmazás 
-# RUN addgroup appgroup &&  adduser -S -G appgroup appuser
-RUN addgroup appgroup && adduser --system -ingroup appgroup appuser
+RUN addgroup appgroup &&  adduser -S -G appgroup appuser
+# RUN addgroup appgroup && adduser --system -ingroup appgroup appuser
+
 
 # munka könyvtár beállítása
 WORKDIR /app

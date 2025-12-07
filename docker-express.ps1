@@ -1,14 +1,11 @@
-﻿# Létrehozzuk a tárolót a konténerünknek:
-
+﻿# Létrehozzuk a tárolót a konténerünknek és kibontjuk a fájlokat
 $path="C:\Docker\docker-express"
 
 if(!(Test-Path $path)){
     New-Item $path -ItemType "directory"
+    Expand-Archive -Path "$path.zip" -DestinationPath "$path" -Force
 } 
 Set-Location $path
-
-# Bemásoljuk az előkészített projekt fájlokat a tárolóba:
-Expand-Archive -Path "$path.zip" -DestinationPath "$path" -Force
 
 # A VisualStudio Code megnyitása a projektmappával
 code $path
@@ -23,11 +20,13 @@ if (!(Test-Path ".\.git" -PathType Container)) {
 }
 
 # Alap Docker image letöltése:
-docker pull node:25.2.1-alpine3.23
+#docker pull node:25.2.1-alpine3.23
+docker pull m9g4gj/express-app:latest
 
-# Konténer image létrehozása:
+# Saját konténer image létrehozása:
 # (<.> a munkakönyvtár beállítása, ahol a Docker fájl található, <-t> verziózás <m9g4gj/express-app> a konténer neve)
 docker build . -t m9g4gj/express-app
 
 # Konténer futtatása:
-docker run -d -p 16111:3000 m9g4gj/express
+# docker run -p 16111:3000 m9g4gj/express-app
+docker run -d -p 16111:3000 m9g4gj/express-app
