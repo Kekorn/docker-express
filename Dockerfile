@@ -1,5 +1,5 @@
 # kiiduló image megadása
-FROM node:25.2.1
+FROM node:25.2.1-alpine3.23
 
 # új felhasználó létrehozása a konténerben, hogy ne root-ként 
 # fusson az alkalmazás 
