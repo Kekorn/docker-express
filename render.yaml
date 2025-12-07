@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: docker-express
+    runtime: docker
+    plan: free
+    region: frankfurt
+    repo: https://github.com/m9g4gj/docker-express.git
+    branch: main
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 8080
+    healthCheckPath: /
