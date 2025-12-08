@@ -1,7 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box;    
+    box-sizing: border-box;
 }
 
 body {
@@ -14,4 +14,15 @@ body {
     color: whitesmoke;
     font-size: 2em;
     margin: auto;
+    padding: 100px;
+}
+
+h1 {
+    margin: auto;
+    padding: 50px;
+    text-align: center;
+}
+
+p {
+    margin: 20px;
 }

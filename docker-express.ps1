@@ -19,6 +19,9 @@ if (!(Test-Path ".\.git" -PathType Container)) {
     Write-Host "Már van Git tároló ebben a mappában."
 }
 
+# Szükséges Node.js csomagok telepítése
+npm install
+
 # Alap Docker image letöltése:
 #docker pull node:25.2.1-alpine3.23
 docker pull m9g4gj/express-app:latest
