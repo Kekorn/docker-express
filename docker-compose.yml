@@ -1,0 +1,17 @@
+services:
+  node-app:
+    build: .
+    image: m9g4gj/express-app:latest
+    container_name: node_app_container
+    user: appuser
+    working_dir: /app
+    command: sh -c "npm install && npm start"
+    ports:
+      - "16111:8080"
+    volumes:
+      - .:/app
+      
+
+      
+
+      
