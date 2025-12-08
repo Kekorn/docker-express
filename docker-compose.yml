@@ -10,6 +10,11 @@ services:
       - "16111:8080"
     volumes:
       - .:/app
+  redis:
+    image: "redis:alpine"
+    container_name: redis_container
+    ports:
+      - "16379:6379"
       
 
       
