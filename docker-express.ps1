@@ -40,5 +40,6 @@ docker run -d -p 16111:3000 m9g4gj/express-app
 # docker rm $containerId
 # docker ps -a
 
-# A webapp publikus elérhetősége: https://express-docker-app.onrender.com/
+# A webapp publikus elérhetősége: https://docker-express-xegq.onrender.com/
+
 # Github repo: https://github.com/m9g4gj/docker-express.git
